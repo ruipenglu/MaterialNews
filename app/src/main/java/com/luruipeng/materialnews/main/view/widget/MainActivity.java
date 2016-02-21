@@ -15,6 +15,7 @@ import com.luruipeng.materialnews.about.view.widget.AboutFragment;
 import com.luruipeng.materialnews.main.presenter.MainPresenter;
 import com.luruipeng.materialnews.main.presenter.impl.MainPresenterImpl;
 import com.luruipeng.materialnews.main.view.MainView;
+import com.luruipeng.materialnews.news.view.widget.NewsFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener,MainView {
@@ -85,7 +86,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void switch2News() {
-
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new NewsFragment()).commit();
+        mToolbar.setTitle(R.string.navigation_news);
     }
 
     @Override
@@ -100,7 +102,7 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void switch2About() {
-        getFragmentManager().beginTransaction().replace(R.id.frame_content,new AboutFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.frame_content,new AboutFragment()).commit();
         mToolbar.setTitle(R.string.navigation_about);
     }
 }

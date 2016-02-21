@@ -19,8 +19,8 @@ public class MainPresenterImpl implements MainPresenter {
 
         if (id == R.id.navigation_item_about) {
             mMainView.switch2About();
-        } else if (id == R.id.navigation_item_weather) {
-
+        } else if (id == R.id.navigation_item_news) {
+            mMainView.switch2News();
         }
     }
 }

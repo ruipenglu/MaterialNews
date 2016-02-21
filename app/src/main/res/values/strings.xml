@@ -5,4 +5,16 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="app_description">此APP用于练习MVP和各种开源库的使用</string>
+    <string name="app_github_url">项目地址：https://github.com/lugegege/MaterialNews</string>
+    <string name="author">作者： 鹿瑞朋</string>
+    <string name="email">邮箱： luruipeng1994@foxmail.com</string>
+    <string name="blog">博客： lugegege.github.io</string>
+    <string name="thanks">参考： https://github.com/liuling07/SimpleNews</string>
+
+    <string name="navigation_news">新闻</string>
+    <string name="navigation_images">图片</string>
+    <string name="navigation_weather">天气</string>
+    <string name="navigation_about">关于</string>
+
 </resources>

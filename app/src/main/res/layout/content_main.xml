@@ -2,18 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_below="@+id/appbar"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:scrollbars="none"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.luruipeng.materialnews.MainActivity"
+    tools:context=".main.view.widget.MainActivity"
     tools:showIn="@layout/app_bar_main">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
 </RelativeLayout>

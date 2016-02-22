@@ -10,9 +10,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import com.luruipeng.materialnews.R;
-import com.luruipeng.materialnews.about.view.widget.AboutFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +19,11 @@ import java.util.List;
  * Created by Ruipeng Lu on 2016/2/21 0021.
  */
 public class NewsFragment extends Fragment {
+
+    public static final int NEWS_TYPE_TOP = 0;
+    public static final int NEWS_TYPE_NBA = 1;
+    public static final int NEWS_TYPE_CARS = 2;
+    public static final int NEWS_TYPE_JOKES = 3;
 
     TabLayout mTabLayout;
     ViewPager mViewPager;
@@ -45,10 +48,10 @@ public class NewsFragment extends Fragment {
 
     private void initViewPager() {
         MyPagerAdapter mAdapter=new MyPagerAdapter(getChildFragmentManager());
-        mAdapter.addFragment(new NewsListFragment(),"头条");
-        mAdapter.addFragment(new AboutFragment(),"关于");
-        mAdapter.addFragment(new AboutFragment(),"关于");
-        mAdapter.addFragment(new AboutFragment(),"关于");
+        mAdapter.addFragment(NewsListFragment.newInstance(NEWS_TYPE_TOP), getString(R.string.top));
+        mAdapter.addFragment(NewsListFragment.newInstance(NEWS_TYPE_NBA), getString(R.string.nba));
+        mAdapter.addFragment(NewsListFragment.newInstance(NEWS_TYPE_CARS), getString(R.string.cars));
+        mAdapter.addFragment(NewsListFragment.newInstance(NEWS_TYPE_JOKES), getString(R.string.jokes));
         mViewPager.setAdapter(mAdapter);
     }
 

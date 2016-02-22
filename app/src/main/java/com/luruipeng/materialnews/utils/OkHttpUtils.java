@@ -41,7 +41,7 @@ public class OkHttpUtils {
         mDelivery = new Handler(Looper.getMainLooper());
     }
 
-    private synchronized OkHttpUtils getmInstance() {
+    private synchronized static OkHttpUtils getmInstance() {
         if (mInstance == null) {
             mInstance = new OkHttpUtils();
         }
@@ -70,10 +70,11 @@ public class OkHttpUtils {
             public void onResponse(Response response) throws IOException {
                 try {
                     String str = response.body().string();
+//                    System.out.println(str);
                     if (callback.mType == String.class) {
                         sendSuccessCallBack(callback, str);
                     } else {
-                        Object object = GsonUtils.deserialize1(str, callback.mType);
+                        Object object = GsonUtils.deserialize(str, callback.mType);
                         sendSuccessCallBack(callback, object);
                     }
                 } catch (final Exception e) {
@@ -123,7 +124,7 @@ public class OkHttpUtils {
      * @param url  请求url
      * @param callback  请求回调
      */
-    public void get(String url, ResultCallback callback) {
+    public static void get(String url, ResultCallback callback) {
         getmInstance().getRequest(url, callback);
     }
 
@@ -133,7 +134,7 @@ public class OkHttpUtils {
      * @param callback  请求回调
      * @param params    请求参数
      */
-    public void post(String url, final ResultCallback callback, List<Param> params) {
+    public static void post(String url, final ResultCallback callback, List<Param> params) {
         getmInstance().postRequest(url, callback, params);
     }
 
@@ -187,5 +188,4 @@ public class OkHttpUtils {
             this.value = value;
         }
     }
-
 }

@@ -45,7 +45,7 @@ public class NewsFragment extends Fragment {
 
     private void initViewPager() {
         MyPagerAdapter mAdapter=new MyPagerAdapter(getChildFragmentManager());
-        mAdapter.addFragment(new AboutFragment(),"关于");
+        mAdapter.addFragment(new NewsListFragment(),"头条");
         mAdapter.addFragment(new AboutFragment(),"关于");
         mAdapter.addFragment(new AboutFragment(),"关于");
         mAdapter.addFragment(new AboutFragment(),"关于");

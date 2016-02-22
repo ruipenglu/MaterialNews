@@ -25,4 +25,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:design:23.1.1'
     compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.squareup.okhttp:okhttp:2.7.0'
+    compile 'com.google.code.gson:gson:2.2.4'
 }

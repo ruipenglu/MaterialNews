@@ -20,5 +20,7 @@
     <string name="nba">NBA</string>
     <string name="cars">汽车</string>
     <string name="jokes">笑话</string>
+    <string name="transition_news_img">transition_news_img</string>
+    <string name="title_activity_news_detail">NewsDetailActivity</string>
 
 </resources>

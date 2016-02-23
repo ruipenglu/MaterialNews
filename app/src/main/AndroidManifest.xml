@@ -20,6 +20,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".news.view.widget.NewsDetailAvtivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_activity_news_detail">
+
+        </activity>
     </application>
 
 </manifest>

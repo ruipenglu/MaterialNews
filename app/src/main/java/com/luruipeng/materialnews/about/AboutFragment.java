@@ -1,4 +1,4 @@
-package com.luruipeng.materialnews.about.view.widget;
+package com.luruipeng.materialnews.about;
 
 import android.support.v4.app.Fragment;
 import android.os.Bundle;

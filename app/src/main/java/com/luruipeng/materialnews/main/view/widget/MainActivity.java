@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.luruipeng.materialnews.R;
-import com.luruipeng.materialnews.about.view.widget.AboutFragment;
+import com.luruipeng.materialnews.about.AboutFragment;
 import com.luruipeng.materialnews.main.presenter.MainPresenter;
 import com.luruipeng.materialnews.main.presenter.impl.MainPresenterImpl;
 import com.luruipeng.materialnews.main.view.MainView;

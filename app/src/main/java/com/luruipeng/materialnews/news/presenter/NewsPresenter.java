@@ -1,4 +1,4 @@
-package com.luruipeng.materialnews.news.view.presenter;
+package com.luruipeng.materialnews.news.presenter;
 
 /**
  * Created by Ruipeng Lu on 2016/2/22 0022.

@@ -19,8 +19,8 @@ import com.luruipeng.materialnews.R;
 import com.luruipeng.materialnews.beans.NewsBean;
 import com.luruipeng.materialnews.commons.Urls;
 import com.luruipeng.materialnews.news.view.NewsView;
-import com.luruipeng.materialnews.news.view.presenter.NewsPresenter;
-import com.luruipeng.materialnews.news.view.presenter.NewsPresenterImpl;
+import com.luruipeng.materialnews.news.presenter.NewsPresenter;
+import com.luruipeng.materialnews.news.presenter.NewsPresenterImpl;
 
 import java.util.ArrayList;
 import java.util.List;

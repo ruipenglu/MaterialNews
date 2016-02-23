@@ -1,7 +1,6 @@
 package com.luruipeng.materialnews.news.view.widget;
 
 import android.os.Bundle;
-import android.os.PersistableBundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -12,8 +11,8 @@ import android.widget.ProgressBar;
 import com.luruipeng.materialnews.R;
 import com.luruipeng.materialnews.beans.NewsBean;
 import com.luruipeng.materialnews.news.view.NewsDetailView;
-import com.luruipeng.materialnews.news.view.presenter.NewsDetailPresenter;
-import com.luruipeng.materialnews.news.view.presenter.NewsDetailPresenterImpl;
+import com.luruipeng.materialnews.news.presenter.NewsDetailPresenter;
+import com.luruipeng.materialnews.news.presenter.NewsDetailPresenterImpl;
 import com.luruipeng.materialnews.utils.ImageLoaderUtils;
 
 import org.sufficientlysecure.htmltextview.HtmlTextView;

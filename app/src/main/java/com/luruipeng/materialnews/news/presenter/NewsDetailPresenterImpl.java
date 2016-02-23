@@ -1,4 +1,4 @@
-package com.luruipeng.materialnews.news.view.presenter;
+package com.luruipeng.materialnews.news.presenter;
 
 import android.content.Context;
 

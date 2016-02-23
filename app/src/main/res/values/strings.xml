@@ -22,5 +22,6 @@
     <string name="jokes">笑话</string>
     <string name="transition_news_img">transition_news_img</string>
     <string name="title_activity_news_detail">NewsDetailActivity</string>
+    <string name="load_fail">loading failed...</string>
 
 </resources>

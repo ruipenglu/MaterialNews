@@ -11,4 +11,9 @@ public class NewsModelImpl implements NewsModel {
         System.out.println(">>>>>>>>>>>>>>>>>>>NewsModel>>>>>>>>>>>>>>");
         OkHttpUtils.get(url, callback);
     }
+
+    @Override
+    public void loadNewsDetail(String url, OkHttpUtils.ResultCallback callback) {
+        OkHttpUtils.get(url,callback);
+    }
 }

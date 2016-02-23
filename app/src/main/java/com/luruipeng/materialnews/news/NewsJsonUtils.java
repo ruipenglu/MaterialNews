@@ -5,6 +5,7 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.luruipeng.materialnews.beans.NewsBean;
+import com.luruipeng.materialnews.beans.NewsDetailBean;
 import com.luruipeng.materialnews.utils.GsonUtils;
 
 import java.util.ArrayList;
@@ -48,6 +49,20 @@ public class NewsJsonUtils {
 
         }
         return beans;
+    }
+    public static NewsDetailBean readJsonNewsDetailBeans(String res, String docId) {
+        NewsDetailBean newsDetailBean = null;
+        try {
+            JsonParser parser = new JsonParser();
+            JsonObject jsonObj = parser.parse(res).getAsJsonObject();
+            JsonElement jsonElement = jsonObj.get(docId);
+            if(jsonElement == null) {
+                return null;
+            }
+            newsDetailBean = GsonUtils.deserialize(jsonElement.getAsJsonObject(), NewsDetailBean.class);
+        } catch (Exception e) {
+        }
+        return newsDetailBean;
     }
 
 }

@@ -3,6 +3,7 @@ package com.luruipeng.materialnews.news.view.widget;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
@@ -69,7 +70,7 @@ public class NewsListFragment extends Fragment implements NewsView,SwipeRefreshL
 
         mRecyclerView.addItemDecoration(new DividerItemDecoration(getActivity(),DividerItemDecoration.VERTICAL_LIST));
 
-        myAdapter=new NewsAdapter();
+        myAdapter=new NewsAdapter(getActivity().getApplicationContext());
         myAdapter.setOnItemClickListener(mOnItemClickListener);
         mRecyclerView.setAdapter(myAdapter);
         mRecyclerView.setOnScrollListener(mOnScrollListener);
@@ -91,7 +92,8 @@ public class NewsListFragment extends Fragment implements NewsView,SwipeRefreshL
         public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
             super.onScrollStateChanged(recyclerView, newState);
             if (newState == RecyclerView.SCROLL_STATE_IDLE
-                    && lastVisibleItem + 1 == myAdapter.getItemCount()) {
+                    && lastVisibleItem + 1 == myAdapter.getItemCount()
+                    && myAdapter.isShowFooter()) {
                 //加载更多
                 mNewsPresenter.loadNews(mType, pageIndex + Urls.PAZE_SIZE);
             }
@@ -125,16 +127,22 @@ public class NewsListFragment extends Fragment implements NewsView,SwipeRefreshL
             mData=new ArrayList<NewsBean>();
         }
         mData.addAll(newsList);
-        pageIndex+= Urls.PAZE_SIZE;
-        if(newsList==null){
+        myAdapter.notifyDataSetChanged();
+        pageIndex += Urls.PAZE_SIZE;
+        //如果没有更多数据了,则隐藏footer布局
+        if(newsList == null || newsList.size() == 0) {
             myAdapter.isShowFooter(false);
         }
-        myAdapter.notifyDataSetChanged();
     }
 
     @Override
     public void hideProgress() {
         mSwipeRefreshLayout.setRefreshing(false);
+    }
+
+    @Override
+    public void showLoadFailMsg() {
+        Snackbar.make(mRecyclerView.getRootView(), getString(R.string.load_fail), Snackbar.LENGTH_SHORT).show();
     }
 
     private NewsAdapter.OnItemClickListener mOnItemClickListener=new NewsAdapter.OnItemClickListener() {

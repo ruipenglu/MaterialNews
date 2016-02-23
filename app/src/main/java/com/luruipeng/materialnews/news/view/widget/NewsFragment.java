@@ -33,6 +33,7 @@ public class NewsFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_news,null);
         mTabLayout= (TabLayout) view.findViewById(R.id.tab_layout);
         mViewPager= (ViewPager) view.findViewById(R.id.viewpager);
+        mViewPager.setOffscreenPageLimit(3);
         initViewPager();
         initTabLayout();
         return view;

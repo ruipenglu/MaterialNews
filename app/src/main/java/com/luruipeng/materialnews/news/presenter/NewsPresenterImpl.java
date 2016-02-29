@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.luruipeng.materialnews.beans.NewsBean;
 import com.luruipeng.materialnews.commons.Urls;
-import com.luruipeng.materialnews.news.NewsJsonUtils;
+import com.luruipeng.materialnews.news.view.NewsJsonUtils;
 import com.luruipeng.materialnews.news.model.NewsModel;
 import com.luruipeng.materialnews.news.model.NewsModelImpl;
 import com.luruipeng.materialnews.news.view.NewsView;

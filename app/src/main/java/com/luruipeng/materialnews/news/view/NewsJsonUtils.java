@@ -1,4 +1,4 @@
-package com.luruipeng.materialnews.news;
+package com.luruipeng.materialnews.news.view;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;

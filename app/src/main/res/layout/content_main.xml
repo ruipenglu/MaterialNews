@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:scrollbars="none"
+    android:elevation="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".main.view.widget.MainActivity"
     tools:showIn="@layout/app_bar_main">
